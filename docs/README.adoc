@@ -26,7 +26,7 @@ endif::[]
 :listing-caption: Listagem
 :figure-caption: Figura
 
-= Template para Elaboração de Material Didático Multimídia com AsciiDoc, git e GitHub 1
+= Template para Elaboração de Material Didático Multimídia com AsciiDoc, git e GitHub 2
 
 IMPORTANT: Você pode baixar uma versão sempre atualizada em PDF deste material https://github.com/manoelcampos/asciidoc-github-template/blob/gh-pages/ebook.pdf[aqui].
 
