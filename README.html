@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.15">
+<meta name="description" content="Elaboração de material didático multimídia com AsciiDoc, git e GitHub">
+<title>Template para Elaboração de Material Didático Multimídia com AsciiDoc, git e GitHub 3</title>
+<style>
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Template para Elaboração de Material Didático Multimídia com AsciiDoc, git e GitHub 3</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Sumário</div>
+<ul class="sectlevel1">
+<li><a href="#_instalação_das_ferramentas_no_seu_ambiente_de_desenvolvimento">1. Instalação das Ferramentas no seu Ambiente de Desenvolvimento</a></li>
+<li><a href="#_comandos_asciidoc">2. Comandos AsciiDoc</a></li>
+<li><a href="#_github_pages">3. GitHub Pages</a></li>
+<li><a href="#_licença">4. Licença</a></li>
+<li><a href="#_referências">5. Referências</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Você pode baixar uma versão sempre atualizada em PDF deste material <a href="https://github.com/manoelcampos/asciidoc-github-template/blob/gh-pages/ebook.pdf">aqui</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Este repositório serve como um template para a criação de material didático multimídia utilizando
+AsciiDoc e hospedando no GitHub Pages.
+Ele apresenta instruções de como configurar seu ambiente de desenvolvimento
+para poder escrever conteúdo em AsciiDoc e publicar no GitHub Pages.
+Adicionalmente, há um resumo dos comandos AsciiDoc para quem estiver iniciando
+na produção de conteúdo neste formato.</p>
+</div>
+<div class="paragraph">
+<p>Assim, utilize este arquivo README.adoc como exemplo pois ele já está configurado.
+Para criar seu próprio conteúdo, basta apagar o texto neste arquivo e incluir
+o seu. Quando for criar novos arquivos, basta copiar o README.adoc anterior
+e iniciar a partir daí.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instalação_das_ferramentas_no_seu_ambiente_de_desenvolvimento">1. Instalação das Ferramentas no seu Ambiente de Desenvolvimento</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Execute o script <a href="ferramentas.sh">ferramentas.sh</a> em um terminal com sistema Ubuntu ou qualquer derivado de Debian:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">sh ferramentas.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Se sua distribuição for antiga ou não for 64 bits, pode ser que a instalação do Visual Studio code não funcione. Se ocorrer erro, baixe o Visual Studio Code manualmente em <a href="http://code.visualstudio.com" class="bare">http://code.visualstudio.com</a></p>
+</div>
+<div class="paragraph">
+<p>Crie uma conta no GitHub em <a href="https://github.com/signup" class="bare">https://github.com/signup</a>. O nome de usuário se torna o link para sua conta pública, como <a href="http://github.com/manoelcampos" class="bare">http://github.com/manoelcampos</a>. Por isso, escolha o nome apropriadamente.</p>
+</div>
+<div class="paragraph">
+<p>Para qualquer alteração em um projeto que você desejar enviar para o GitHub a partir da sua máquina, você precisará informar nome de usuário e senha. Isso se tornará um processo bastante chato e toma tempo. Para evitar isso, na nossa máquina pessoal, podemos configurar a autenticação por meio de um par de chaves pública/privada.</p>
+</div>
+<div class="paragraph">
+<p>Para isto, siga o tutorial do vídeo abaixo.</p>
+</div>
+<div class="videoblock">
+<div class="title">Autenticação baseada em chave no GitHub a partir do Linux</div>
+<div class="content">
+<iframe width="640" height="480" src="https://www.youtube.com/embed/j7lX9ff9rC8?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_comandos_asciidoc">2. Comandos AsciiDoc</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="comandos.html">Um resumo dos comandos AsciiDoc está disponível aqui.</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_github_pages">3. GitHub Pages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>O repositório usa a <a href="https://github.com/manoelcampos/asciidoctor-ghpages-action">AsciiDoctor GitHub Pages Action</a> para converter cada arquivo <code>adoc</code> para <code>html</code>, enviando tais arquivos para o branch <code>gh-pages</code>. Este processo ocorre automaticamente sempre que um push é executado ou pull request enviada. Com isto, o material estará disponível em um site no GitHub Pages em <code>http&#58;//seu-nome-de-usuario.github.io/nome-do-seu-repositorio</code>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+É necessário incluir o branch <code>gh-pages</code> como fonte de publicação para seu site GitHub Pages nas configurações do seu repositório. <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Instruções aqui</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_licença">4. Licença</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Este repositório não possui uma licença definida e você pode utilizar o conteúdo dele livremente
+para criar seu próprio repositório. Assim, não é preciso dar qualquer tipo de crédito por ter utilizado
+este projeto (a menos que realmente queira).</p>
+</div>
+<div class="paragraph">
+<p>Você pode utilizar tal repositório como bem desejar, sem qualquer tipo de limitação.
+No entanto, o repositório é fornecido como está e nenhuma responsabilidade será
+atribuída ao autor do mesmo.</p>
+</div>
+<div class="paragraph">
+<p>Ao produzir seu conteúdo multimídia a partir deste respositório,
+é importante adicionar um arquivo LICENSE e assim definir
+explicitamente uma licença para o conteúdo que você produzir.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_referências">5. Referências</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://asciidoctor.org/docs/asciidoc-writers-guide/">AsciiDoc Official Writer’s Guide</a></p>
+</li>
+<li>
+<p><a href="https://asciidoctor.org/docs/">Toda a Documentação oficial do AsciiDoc</a></p>
+</li>
+<li>
+<p><a href="https://github.com/darshandsoni/asciidoctor-skins">Temas em CSS</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>

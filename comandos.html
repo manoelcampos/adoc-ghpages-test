@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.15">
+<meta name="description" content="Elaboração de material didático multimídia com AsciiDoc, git e GitHub">
+<title>Resumo de Comandos AsciiDoc</title>
+<style>
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/github.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<div id="toc" class="toc2">
+<div id="toctitle">Sumário</div>
+<ul class="sectlevel1">
+<li><a href="#_resumo_de_comandos_asciidoc">1. Resumo de Comandos AsciiDoc</a>
+<ul class="sectlevel2">
+<li><a href="#_seçõestítulos_numeração">1.1. Seções/Títulos, Numeração</a></li>
+<li><a href="#_marcadores">1.2. Marcadores</a>
+<ul class="sectlevel3">
+<li><a href="#_para_criar_uma_lista_de_marcadores_basta_usar_um_hífen_em_cada_linha">1.2.1. Para criar uma lista de marcadores, basta usar um hífen em cada linha:</a></li>
+<li><a href="#_para_numerar_os_itens_basta_usar_números_sequenciais_ou_apenas_um_1_na_frente_de_cada_item">1.2.2. Para numerar os itens, basta usar números sequenciais ou apenas um 1 na frente de cada item:</a></li>
+</ul>
+</li>
+<li><a href="#_itálico_e_negrito">1.3. <em>Itálico</em> e <strong>Negrito</strong></a></li>
+<li><a href="#_links">1.4. Links</a>
+<ul class="sectlevel3">
+<li><a href="#_link_para_documento_local">1.4.1. Link para documento local</a></li>
+<li><a href="#_link_para_página_externa">1.4.2. Link para página externa</a></li>
+<li><a href="#_link_para_outros_arquivos_asciidoc">1.4.3. Link para outros arquivos asciidoc</a></li>
+</ul>
+</li>
+<li><a href="#_tabelas">1.5. Tabelas</a></li>
+<li><a href="#_imagens">1.6. Imagens</a>
+<ul class="sectlevel3">
+<li><a href="#_imagem_em_bloco_em_um_linha_separada">1.6.1. Imagem em bloco (em um linha separada)</a></li>
+<li><a href="#_imagem_com_título">1.6.2. Imagem com Título</a></li>
+<li><a href="#_gifs_animados">1.6.3. Gifs animados</a></li>
+</ul>
+</li>
+<li><a href="#_vídeos">1.7. Vídeos</a></li>
+<li><a href="#_notas">1.8. Notas</a>
+<ul class="sectlevel3">
+<li><a href="#_notas_em_blocos_com_quebra_de_linha">1.8.1. Notas em Blocos (com quebra de linha)</a></li>
+</ul>
+</li>
+<li><a href="#_exibindo_código">1.9. Exibindo código</a>
+<ul class="sectlevel3">
+<li><a href="#_exibindo_blocos_de_código">1.9.1. Exibindo blocos de código</a></li>
+</ul>
+</li>
+<li><a href="#_incluindo_arquivos_externos_no_documento_adoc">1.10. Incluindo arquivos externos no documento adoc</a>
+<ul class="sectlevel3">
+<li><a href="#_incluindo_apenas_trechos_de_um_arquivo">1.10.1. Incluindo apenas trechos de um arquivo</a></li>
+<li><a href="#_destacando_código_fonte_incluído_a_partir_de_um_arquivo">1.10.2. Destacando código fonte incluído a partir de um arquivo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_resumo_de_comandos_asciidoc">1. Resumo de Comandos AsciiDoc</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_seçõestítulos_numeração">1.1. Seções/Títulos, Numeração</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">= Título
+
+== Título 1
+
+=== Título 2
+
+==== Título 3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Para numerar os títulos, basta adicionar a linha abaixo no topo do documento:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">:numbered:</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marcadores">1.2. Marcadores</h3>
+<div class="sect3">
+<h4 id="_para_criar_uma_lista_de_marcadores_basta_usar_um_hífen_em_cada_linha">1.2.1. Para criar uma lista de marcadores, basta usar um hífen em cada linha:</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">- Item A
+- Item B
+- Item C</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_para_numerar_os_itens_basta_usar_números_sequenciais_ou_apenas_um_1_na_frente_de_cada_item">1.2.2. Para numerar os itens, basta usar números sequenciais ou apenas um 1 na frente de cada item:</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">1. Item 1
+1. Item 2
+1. Item 3</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_itálico_e_negrito">1.3. <em>Itálico</em> e <strong>Negrito</strong></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">_Itálico_
+
+*Negrito*</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_links">1.4. Links</h3>
+<div class="sect3">
+<h4 id="_link_para_documento_local">1.4.1. Link para documento local</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">link:documento.ext[Documento]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="websockets.pptx">Apresentação sobre WebSockets</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_link_para_página_externa">1.4.2. Link para página externa</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">http://palmas.ifto.edu.br
+http://palmas.ifto.edu.br[IFTO Palmas]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="http://ifto.edu.br" class="bare">http://ifto.edu.br</a></p>
+</div>
+<div class="paragraph">
+<p><a href="http://palmas.ifto.edu.br">IFTO Palmas</a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_link_para_outros_arquivos_asciidoc">1.4.3. Link para outros arquivos asciidoc</h4>
+<div class="paragraph">
+<p>Se você usar a tag link para outro arquivo <code>.adoc</code>, tal link só funcionará na interface do GitHub.
+Por outro lado, se você está compilando os AsciiDocs para HTML e hospedando como um site convencional
+em qualquer lugar como o GitHub Pages (que não exibe a interface do GitHub),
+tais links não funcionarão, pois o navegador não interpreta arquivos <code>.adoc</code>,
+somente sites como o GitHub tem essa capacidade.</p>
+</div>
+<div class="paragraph">
+<p>Por outro lado, se você colocar o link com extensão <code>.html</code>, vai funcionar na sua hospedagem
+mas não vai funcionar na interface padrão do GitHub.
+Para resolver esse dilema, neste caso, use o comando <code>xref</code> no lugar de <code>link</code>.
+A estrutura é exatamente a mesma:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">xref:documento.adoc[Documento AsciiDoc]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Tal comando vai gerar um link, incluindo a extensão apropriada, dependendo de onde e como o arquivo AsciiDoc está sendo aberto.
+Mas para isso funcionar, é preciso incluir o comando <code>if</code> abaixo no topo de cada documento:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>ifdef::env-github,env-browser[]
+:outfilesuffix: .adoc
+endif::[]</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tabelas">1.5. Tabelas</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">|===
+| Coluna A  | Coluna B  | Coluna C
+| Célula A1 | Célula B1 | Célula C1
+| Célula A2 | Célula B2 | Célula C2
+|===</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coluna A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coluna B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Coluna C</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Célula A1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Célula B1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Célula C1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Célula A2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Célula B2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Célula C2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Veja que basta separar as colunas por <code>|</code> e iniciar e terminar a tabela com <code>|===</code>.
+Você pode destacar os títulos usando negrito, por exemplo, como **Coluna A**.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_imagens">1.6. Imagens</h3>
+<div class="paragraph">
+<p>Imagem no meio do texto.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Um texto image:url-ou-endereço-local[] qualquer aqui.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Esta imagem <span class="image"><img src="/images/evolution-of-man-and-computer.jpg" alt="evolution of man and computer"></span> mostra a evolução do homem e dos computadores.</p>
+</div>
+<div class="sect3">
+<h4 id="_imagem_em_bloco_em_um_linha_separada">1.6.1. Imagem em bloco (em um linha separada)</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">Um texto aqui.
+
+.Título Opcional
+image::url-ou-endereço-local[]
+
+Outro texto aqui. Observe as linhas em branco antes e depois.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A imagem não pode ficar junto com o texto.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/images/thread-selectors.png" alt="thread selectors">
+</div>
+<div class="title">Figura 1. Seletores para execução de tarefas concorrentes em uma Thread</div>
+</div>
+<div class="paragraph">
+<p>Ela deve ficar em uma linha separada.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_imagem_com_título">1.6.2. Imagem com Título</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Título da Imagem aqui
+image::url-ou-endereço-local[]</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Laptop-hard-drive-exposed.jpg/314px-Laptop-hard-drive-exposed.jpg" alt="314px Laptop hard drive exposed">
+</div>
+<div class="title">Figura 2. Hard Disk Drive - HDD (Fonte: Wikipedia)</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_gifs_animados">1.6.3. Gifs animados</h4>
+<div class="paragraph">
+<p>Pode-se usar qualquer uma das formas acima, por exemplo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Titulo
+image:url-ou-endereço-local[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Escalonamento horizontal de serviços</div>
+<p><span class="image"><img src="/images/horizontal-scaling-small.gif" alt="horizontal scaling small"></span></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_vídeos">1.7. Vídeos</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">.Título Opcional
+video::SALUHrZz2OQ[youtube]
+
+video::SALUHrZz2OQ[youtube]
+
+video::SALUHrZz2OQ[youtube, width=640, height=480]</code></pre>
+</div>
+</div>
+<div class="videoblock">
+<div class="title">Locks otimistas em aplicações de bancos de dados</div>
+<div class="content">
+<iframe width="640" height="480" src="https://www.youtube.com/embed/SALUHrZz2OQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_notas">1.8. Notas</h3>
+<div class="paragraph">
+<p>Existem 5 tipos de notas, que são blocos no meio do texto para chamar a atenção para algo. A forma simplificada não permite quebra de linha no texto.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">NOTE: Texto da nota aqui.
+
+TIP: Texto da dica aqui.
+
+WARNING: Texto do aviso aqui.
+
+CAUTION: Texto de alerta aqui.
+
+IMPORTANT: Texto importante aqui.</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Esta é uma nota qualquer.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Esta é uma dica qualquer.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Este é um aviso qualquer.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Este é um alerta qualquer.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Esta é uma informação importante.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_notas_em_blocos_com_quebra_de_linha">1.8.1. Notas em Blocos (com quebra de linha)</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">    [NOTE]
+    ====
+    Sua nota aqui.
+    Ela pode contar quantas linhas desejar.
+
+    Você pode até ter linhas em branco.
+    ====</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sua nota aqui.
+Ela pode contar quantas linhas desejar.</p>
+</div>
+<div class="paragraph">
+<p>Você pode até ter linhas em branco.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exibindo_código">1.9. Exibindo código</h3>
+<div class="paragraph">
+<p>Podemos exibir código em qualquer linguagem que desejarmos dentro de um arquivo adoc.
+Se precisamos exibir apenas uma única linha de código, basta envolver tal linha entre apóstrofos,
+como <strong>`linha de código aqui`</strong>. O exemplo abaixo mostra um texto com um comando Linux no meio, tal comando envolvido em apóstrofos. Assim, o comando fica destacado.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>O comando <code>sudo apt-get install asciidoctor</code> instala o compilador de AsciiDoc em sistemas Ubuntu e derivados de debian.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_exibindo_blocos_de_código">1.9.1. Exibindo blocos de código</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">    [source, nome-linguagem-programacao-aqui]
+    ----
+    seu
+    código
+    fonte
+    aqui
+    ----</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_incluindo_arquivos_externos_no_documento_adoc">1.10. Incluindo arquivos externos no documento adoc</h3>
+<div class="paragraph">
+<p>Podemos incluir conteúdo de qualquer outro arquivo dentro de um arquivo adoc.
+Tais arquivos devem estar em formato de texto (como arquivos txt, arquivos de configuração, de código fonte, xml, json, sh, etc).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">    .Titulo opcional
+    include::caminho-ou-url-do-arquivo[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Se usarmos o comando acima para incluírmos um documento adoc dentro de outro, não será exibido o código fonte adoc, mas sim o conteúdo final após o adoc ser compilado.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+O comando <code>include</code> ainda não funciona na interface do GitHub, apenas no GitHub Pages. No GitHub, ele vai apenas criar um link para o arquivo, no lugar de exibir seu conteúdo.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Exemplo de cálculo do quadrado de um número em Java</div>
+<p>public class Quadrado{
+    /**
+     * Calcula o quadrado de um número.
+     */
+    public static double quadrado(double valor){
+        return valor * valor;
+    }</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    public static void main(String[] args) {
+        double valor = 4;
+        System.out.printf("O quadrado de %.2f é %.2f\n", valor, quadrado(valor));
+    }
+}</pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_incluindo_apenas_trechos_de_um_arquivo">1.10.1. Incluindo apenas trechos de um arquivo</h4>
+<div class="paragraph">
+<p>Se desejarmos incluir apenas um determinado trecho de um arquivo no nosso documento adoc,
+podemos delimitar tal trecho dentro do arquivo por meio de uma tag.
+A tag deve ter um nome, como preferirmos.
+Se desejarmos incluir um trecho de um arquivo de código fonte como Java, a abertura e fechamento da tag deve estar comentada.
+Como a tag representa código AsciiDoc e não código Java, se não comentarmos a tag, o código Java não irá compilar.</p>
+</div>
+<div class="paragraph">
+<p>Depois de escolher o nome para sua tag, para delimitar o bloco de código que podemos selecionar para exibir no documento adoc,
+basta delimitar tal bloco com as linhas <code>// tag::nome_da_tag[]</code> e <code>// end::nome_da_tag[]</code>, como no exemplo a seguir.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">// tag::nome_da_tag[]
+Linhas de código
+dentro de arquivo de código fonte,
+que desejamos exibir apenas o trecho envolvido na tag
+// end::nome_da_tag[]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Veja que foi usado <code>//</code> para comentar a tag pois nosso exemplo é com Java.
+Assim, o arquivo Java fica como abaixo:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>import java.util.Scanner;</p>
+</div>
+<div class="paragraph">
+<p>public class Teclado{</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    // tag::main[]
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite seu nome: ");
+        String nome = scanner.nextLine();
+        System.out.println("Olá " + nome);
+    }
+    // end::main[]
+}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Veja que o nome da tag foi chamada de main, justamente por envolver apenas o método <code>main()</code> da classe Java de exemplo.
+Para então exibir apenas o trecho delimitado pela tag no arquivo de código fonte, podemos fazer:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">    .Titulo opcional
+    include::caminho-ou-url-do-arquivo[tag=nome_da_tag]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>O resultado é então como abaixo:</p>
+</div>
+<div class="literalblock">
+<div class="title">Capturando dados do teclado em Java</div>
+<div class="content">
+<pre>public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Digite seu nome: ");
+    String nome = scanner.nextLine();
+    System.out.println("Olá " + nome);
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_destacando_código_fonte_incluído_a_partir_de_um_arquivo">1.10.2. Destacando código fonte incluído a partir de um arquivo</h4>
+<div class="paragraph">
+<p>Em todos os exemplos de inclusão de arquivos de código fonte externo,
+você pode notar que o código não foi destacado (colorido). Para fazer isto,
+basta colocar o <code>include</code> dentro de um bloco <code>[source]</code>, indicando
+o tipo de conteúdo do arquivo (no exemplo, java) como abaixo:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-asciidoc hljs" data-lang="asciidoc">    .Titulo opcional
+    [source, java]
+    ----
+    include::caminho-ou-url-do-arquivo[tag=nome_da_tag]
+    ----</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Observe que o título (se tiver), agora deve ficar no bloco <code>source</code> e não no comando <code>include</code>. O resultado fica então:</p>
+</div>
+<div class="listingblock">
+<div class="title">Listagem 1. Capturando dados do teclado em Java (veja que o código agora está colorido)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import java.util.Scanner;
+
+public class Teclado{
+
+    // tag::main[]
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite seu nome: ");
+        String nome = scanner.nextLine();
+        System.out.println("Olá " + nome);
+    }
+    // end::main[]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+<script>
+if (!hljs.initHighlighting.called) {
+  hljs.initHighlighting.called = true
+  ;[].slice.call(document.querySelectorAll('pre.highlight > code')).forEach(function (el) { hljs.highlightBlock(el) })
+}
+</script>
+</body>
+</html>
