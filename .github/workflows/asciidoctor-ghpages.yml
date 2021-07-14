@@ -26,5 +26,5 @@ jobs:
         source_dir: docs/
         asciidoctor_params: --attribute=nofooter
         pdf_build: true
-        pre_build:  'echo -e "= Generated with pre_build  parameter\n\n- Pre-build content" > pre-build.adoc'
-        post_build: 'echo -e "= Generated with post_build parameter\n\n- Post-build content" > post-build.adoc'
+        pre_build:  'echo -e "= Generated with pre_build  parameter\n\n- Pre-build content" > pre-build.adoc && git add pre-build.adoc'
+        post_build: 'echo -e "= Generated with post_build parameter\n\n- Post-build content" > post-build.adoc && git add post-build.adoc'
